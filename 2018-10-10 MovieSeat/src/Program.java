@@ -4,6 +4,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		
+		double total = 0.0;
+		
 		MovieSeat[][] seats = new MovieSeat[4][3];
 		for(int iRow = 0; iRow < seats.length; iRow++) {
 			for(int iCol = 0; iCol < seats[iRow].length; iCol++) {
@@ -32,8 +34,11 @@ public class Program {
 			}
 			
 			seats[row-1][seatNr-1].isOccupied = true;
+			total += seats[row-1][seatNr-1].price;
 		}
 		scan.close();
+		System.out.println();
+		System.out.println("Total price is: " + total);
 	}
 
 }
