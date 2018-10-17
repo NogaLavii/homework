@@ -9,7 +9,7 @@ public class App {
 		DecimalFormat df2 = new DecimalFormat(".##");
 		
 		for (int i = 0; i < invoices.length; i++) {
-			amount = 80 + Math.random() * (100-80); // Randome amount between 80-100
+			amount = 80 + Math.random() * (100-80); // Random amount between 80-100
 			invoices[i] = new Invoice(amount);
 			System.out.println("Invoice #" + invoices[i].getInvoiceNr() + " for " + df2.format(invoices[i].getAmount()) + " ILS");
 		}
